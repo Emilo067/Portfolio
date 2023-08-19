@@ -16,7 +16,6 @@ export const Main = () => {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </Description>
-                        <Button>Let’s Begin</Button>
                     </AboutMe>
                     <PersonalInfo>
                         <TitleInfo>Personal Info</TitleInfo>
@@ -25,6 +24,7 @@ export const Main = () => {
                             eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </Description>
                     </PersonalInfo>
+                    <Button>Let’s Begin</Button>
                 </Info>
                 <Image src={photo}/>
 
@@ -41,7 +41,6 @@ const StyledMain = styled.section`
 
 const Info = styled.div`
   max-width: 670px;
-  display: flex;
   width: 100%;
   ${Description} {
     width: 334px;
