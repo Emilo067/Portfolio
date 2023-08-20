@@ -8,32 +8,17 @@ import {Button} from "../../../components/Button";
 export const Main = () => {
     return (
         <StyledMain>
-            <MainTitle>
-                <SubTitle>My name is Emil Gasanov</SubTitle>
-                <Title>Front - End Developer (React)</Title>
-            </MainTitle>
-        <FlexWrapper justify={"space-around"}>
-            <Info>
-                <AboutMe>
-                    <SubTitle>About Me</SubTitle>
-                    <Description>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </Description>
+            <FlexWrapper justify={"space-around"} align={"center"}>
+                <MainDescription>
+                    <p>WELCOME TO MY PORTFOLIO</p>
+                    <SubTitle>My name is Emil Gasanov</SubTitle>
+                    <Title>Front - End Developer (React)</Title>
+                    <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.</Description>
                     <Button>Let’s Begin</Button>
-                </AboutMe>
-                <PersonalInfo>
-                    <SubTitle>Personal Info</SubTitle>
-                    <Description>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </Description>
-                </PersonalInfo>
-
-            </Info>
-
-            <Image src={photo}/>
-        </FlexWrapper>
+                </MainDescription>
+                <Image src={photo}/>
+            </FlexWrapper>
 
         </StyledMain>
     );
@@ -44,18 +29,10 @@ const StyledMain = styled.section`
   background-color: rgba(92, 223, 48, 0.67);
 `
 
-const Info = styled.div`
-  max-width: 670px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  ${Description} {
-    width: 334px;
-  }
-`
 
-const MainTitle = styled.div`
-  text-align: center;
+const MainDescription = styled.div`
+  text-align: left;
+  max-width: 50%;
 `
 
 const Title = styled.h1`
