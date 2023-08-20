@@ -46,14 +46,6 @@ const Image = styled.img`
   object-fit: cover;
 `
 
-const AboutMe = styled.div`
-  max-width: 50%;
-`
-
-const PersonalInfo = styled.div`
-  max-width: 50%;
-`
-
 const SubTitle = styled.h2`
 
 `
