@@ -27,6 +27,9 @@ export const Main = () => {
 const StyledMain = styled.section`
   min-height: 100vh;
   background-color: rgba(92, 223, 48, 0.67);
+  ${FlexWrapper} {
+    height: 509px;
+  }
 `
 
 

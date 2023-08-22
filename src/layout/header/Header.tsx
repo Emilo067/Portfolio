@@ -11,7 +11,7 @@ export const Header = () => {
             <FlexWrapper justify="space-between">
             <Logo iconID={"logo"}/>
             <Menu/>
-            <IconBox width={"32"} height={"32"} viewBox={"0 0 32 32"}/>
+            <IconBox width={"35"} height={"30"} viewBox={"0 0 35 30"}/>
             </FlexWrapper>
         </StyledHeader>
     );

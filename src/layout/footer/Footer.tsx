@@ -19,7 +19,7 @@ export const Footer = () => {
                 </Email>
             </Address>
             <Menu/>
-            <IconBox/>
+            <IconBox width={"35"} height={"30"} viewBox={"0 0 35 30"}/>
         </StyledFooter>
     );
 };
