@@ -5,7 +5,7 @@ import {Icon} from "../icon/Icon";
 export const Logo = (props: {iconID:string}) => {
     return (
         <StyledLogo>
-            <a href="#">
+            <a href="#" aria-label={"Main logo"}>
                 <Icon iconID={props.iconID}/>
             </a>
         </StyledLogo>

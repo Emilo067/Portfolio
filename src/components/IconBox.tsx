@@ -11,6 +11,7 @@ type IconBoxPropsType = {
 
 export const IconBox = (props: IconBoxPropsType) => {
     return (
+        <StyledIconBox>
             <FlexWrapper>
                 <a href="#">
                     <Icon iconID={"github"} width={props.width} height={props.height} viewBox={props.viewBox}/>
@@ -23,5 +24,17 @@ export const IconBox = (props: IconBoxPropsType) => {
                     <Icon iconID={"telegram"} width={props.width} height={props.height} viewBox={props.viewBox}/>
                 </a>
             </FlexWrapper>
+        </StyledIconBox>
     );
 };
+
+const StyledIconBox = styled.div`
+  a{
+    &:hover{
+      transform: translateY(-4px);
+    }
+  }
+${FlexWrapper} {
+  gap: 25px;
+}
+`

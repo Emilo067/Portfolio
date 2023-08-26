@@ -1,34 +1,37 @@
 import React from 'react';
 import styled from "styled-components";
 import {IconBox} from "../../components/IconBox";
-import {Menu} from "../../components/menu/Menu";
+import {theme} from "../../styles/theme";
+import {Container} from "../../components/Container";
+import {FlexWrapper} from "../../components/FlexWrapper";
 
 export const Footer = () => {
     return (
         <StyledFooter>
-            <Address>
-                <NumberPhone>
+            <Container>
+                <FlexWrapper justify={"space-between"} align={"center"}>
+                    <Address>
+                        <NumberPhone>
                     <span>
                         Call me: <br/>
-                        123-456-789
+                        <a href={`tel:${theme.contacts.phone}`}>+375296170733</a>
                     </span>
-                </NumberPhone>
-                <Email>
-                    Email: <br/>
-                    xxx@xyz.com
-                </Email>
-            </Address>
-            <Menu/>
-            <IconBox width={"35"} height={"30"} viewBox={"0 0 35 30"}/>
+                        </NumberPhone>
+                        <Email>
+                            Email: <br/>
+                            <a href={`mailto:${theme.contacts.email}`}>gasanovemil467@gmail.com</a>
+                        </Email>
+                    </Address>
+                    <IconBox width={"35"} height={"30"} viewBox={"0 0 35 30"}/>
+                </FlexWrapper>
+            </Container>
         </StyledFooter>
     );
 };
 
 const StyledFooter = styled.footer`
-  display: flex;
-  justify-content: space-around;
-  min-height: 20vh;
-  background-color: cadetblue;
+  background-color: ${theme.colors.primaryBg};
+  padding: 40px 0;
 `
 
 const Address = styled.div`
@@ -37,9 +40,9 @@ const Address = styled.div`
 `
 
 const NumberPhone = styled.div`
-
+  line-height: 1.5;
 `
 
 const Email = styled.div`
-
+  line-height: 1.5;
 `

@@ -4,40 +4,48 @@ import {theme} from "./theme";
 export const GlobalStyles = createGlobalStyle`
   *,
   ::after,
-  ::before{
+  ::before {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
   }
-  
+
   body {
     margin: 0;
-    font-family:"Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: ${theme.colors.font}
+    color: ${theme.colors.font};
+    line-height: 1.2;
   }
-  
-  a{
+
+  a {
     text-decoration: none;
     color: inherit;
   }
-  
-  ul{
+
+  ul {
     list-style: none;
   }
-  
-  section{
-    padding: 100px 0 140px; 
+
+  section {
+    padding: 100px 0 140px;
   }
-  
-  section:nth-child(even){
+
+  section:nth-child(even) {
     background-color: ${theme.colors.primaryBg};
   }
-  section:nth-child(odd){
+
+  section:nth-child(odd) {
     background-color: ${theme.colors.secondaryBg};
   }
-  
+
+  button {
+    background-color: transparent;
+    color: ${theme.colors.font};
+    cursor: pointer;
+  }
+
 `
