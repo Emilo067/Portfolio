@@ -19,6 +19,7 @@ export const GlobalStyles = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     color: ${theme.colors.font};
     line-height: 1.2;
+    overflow-x: hidden;
   }
 
   a {
@@ -45,7 +46,11 @@ export const GlobalStyles = createGlobalStyle`
   button {
     background-color: transparent;
     color: ${theme.colors.font};
-    cursor: pointer;
+    cursor: grab;
+    
+    &:active {
+      cursor: grabbing;
+    }
   }
 
 `
