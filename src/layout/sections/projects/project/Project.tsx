@@ -4,13 +4,10 @@ import {Button} from "../../../../components/Button";
 import styled from "styled-components";
 import projImg from "../../../../assets/img/proj.png"
 import {theme} from "../../../../styles/theme";
+import {font} from "../../../../styles/Common";
 
-type ProjectPropsType = {
-    title?: string
-        //descr?: string
-}
 
-export const Project = (props: ProjectPropsType) => {
+export const Project = () => {
     return (
         <StyledProject>
             <ImageWrapper>
@@ -27,13 +24,13 @@ export const Project = (props: ProjectPropsType) => {
 };
 
 const StyledProject = styled.div`
- max-width: 500px;
+  max-width: 500px;
   width: 100%;
   padding: 25px 25px 40px;
-  border-radius: 50px 0px;
+  border-radius: 50px 0;
   border: 1px solid #A39D9D;
   background: #0F1624;
- 
+
   ${Description} {
     margin-bottom: 50px;
   }
@@ -75,7 +72,7 @@ const ImageWrapper = styled.div`
 `
 
 const Image = styled.img`
-  width: 450px;
+  width: 100%;
   height: 220px;
   display: block;
   margin: 0 auto;
@@ -84,8 +81,7 @@ const Image = styled.img`
 `
 
 const Title = styled.h3`
-  font-size: 30px;
-  font-weight: 600;
+  ${font({weight: 600, fMax: 30, fMin: 20})}
   line-height: 88.5%; /* 26.55px */
   text-align: center;
   margin: 40px 0 67px;
@@ -102,5 +98,9 @@ const Title = styled.h3`
     bottom: -23px;
     right: 50%;
     transform: translateX(50%);
+    
+    @media ${theme.media.mobile} {
+      width: 150px;
+    }
   }
 `

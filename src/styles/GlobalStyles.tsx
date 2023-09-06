@@ -33,6 +33,10 @@ export const GlobalStyles = createGlobalStyle`
 
   section {
     padding: 100px 0 140px;
+    
+    // @media ${theme.media.mobile} {
+    //   padding: 75px 115px;
+    // }
   }
 
   section:nth-child(even) {
@@ -44,13 +48,10 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   button {
-    background-color: transparent;
+    background-color: unset;
+    border: none;
     color: ${theme.colors.font};
-    cursor: grab;
-    
-    &:active {
-      cursor: grabbing;
-    }
+    cursor: pointer;
   }
 
 `

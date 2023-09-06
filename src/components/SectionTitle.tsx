@@ -1,8 +1,8 @@
 import styled from "styled-components";
+import {font} from "../styles/Common";
 
 export const SectionTitle = styled.h2`
-  font-size: 46px;
-  font-weight: 600;
+  ${font({weight: 600, fMax: 46, fMin: 40})}
   text-align: center;
   margin-bottom: 70px;
 `

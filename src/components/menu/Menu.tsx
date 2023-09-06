@@ -31,6 +31,11 @@ const StyledMenu = styled.nav`
 const ListItem = styled.ul`
   display: flex;
   gap: 80px;
+ justify-content: center;
+  
+  @media ${theme.media.tablet} {
+    display: none;
+  }
 `
 
 const Item = styled.li`
@@ -38,7 +43,7 @@ const Item = styled.li`
 `
 
 const Link = styled.a`
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
   //transition: color 0.3s ease;
   //

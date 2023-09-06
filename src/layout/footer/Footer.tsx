@@ -32,11 +32,25 @@ export const Footer = () => {
 const StyledFooter = styled.footer`
   background-color: ${theme.colors.primaryBg};
   padding: 40px 0;
+  
+  @media ${theme.media.tablet} {
+    ${FlexWrapper} {
+      flex-direction: column;
+    }
+    
+  }
 `
 
 const Address = styled.div`
   display: flex;
   gap: 60px;
+  
+  @media ${theme.media.tablet} {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
 `
 
 const NumberPhone = styled.div`

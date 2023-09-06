@@ -12,5 +12,10 @@ export const theme = {
     contacts: {
         email: 'gasanovemil467@gmail.com',
         phone: '+375296170733'
+    },
+
+    media: {
+        tablet: "screen and (max-width: 768px)",
+        mobile: "screen and (max-width: 576px)"
     }
 }

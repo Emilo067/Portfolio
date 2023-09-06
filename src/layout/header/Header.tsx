@@ -6,15 +6,15 @@ import {IconBox} from "../../components/IconBox";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {Container} from "../../components/Container";
 import {theme} from "../../styles/theme";
+import {MobileMenu} from "../../components/menu/mobileMenu/MobileMenu";
 
 export const Header = () => {
     return (
         <StyledHeader>
             <Container>
-                <FlexWrapper justify="space-between" align={"center"}>
-                    <Logo iconID={"logo"}/>
+                <FlexWrapper justify="center" align={"center"}>
                     <Menu/>
-                    <IconBox width={"35"} height={"30"} viewBox={"0 0 35 30"}/>
+                    {/*<MobileMenu/>*/}
                 </FlexWrapper>
             </Container>
         </StyledHeader>
@@ -24,8 +24,8 @@ export const Header = () => {
 const StyledHeader = styled.header`
   background-color: ${theme.colors.primaryBg};
   position: fixed;
-  z-index: 99999;
   left: 0;
   right: 0;
   top: 0;
+  z-index: 99999;
 `

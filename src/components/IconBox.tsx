@@ -2,6 +2,7 @@ import React from 'react';
 import {FlexWrapper} from "./FlexWrapper";
 import {Icon} from "./icon/Icon";
 import styled from "styled-components";
+import {theme} from "../styles/theme";
 
 type IconBoxPropsType = {
     width?: string
@@ -12,7 +13,6 @@ type IconBoxPropsType = {
 export const IconBox = (props: IconBoxPropsType) => {
     return (
         <StyledIconBox>
-            <FlexWrapper>
                 <a href="#">
                     <Icon iconID={"github"} width={props.width} height={props.height} viewBox={props.viewBox}/>
                 </a>
@@ -23,7 +23,6 @@ export const IconBox = (props: IconBoxPropsType) => {
                 <a href="#">
                     <Icon iconID={"telegram"} width={props.width} height={props.height} viewBox={props.viewBox}/>
                 </a>
-            </FlexWrapper>
         </StyledIconBox>
     );
 };
@@ -34,7 +33,12 @@ const StyledIconBox = styled.div`
       transform: translateY(-4px);
     }
   }
-${FlexWrapper} {
+
+  display: flex;
+  flex-direction: row;
   gap: 25px;
-}
+  
+  @media ${theme.media.tablet} {
+    margin-top: 15px;
+  }
 `

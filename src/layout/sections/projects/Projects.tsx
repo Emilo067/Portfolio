@@ -10,7 +10,7 @@ export const Projects = () => {
         <StyledProjects>
             <Container>
                 <SectionTitle>Projects</SectionTitle>
-                <FlexWrapper wrap={"wrap"} justify={"Center"}>
+                <FlexWrapper wrap={"wrap"} justify={"space-around"} gap={"42px"}>
                     <Project/>
                     <Project/>
                     <Project/>
@@ -22,7 +22,5 @@ export const Projects = () => {
 };
 
 const StyledProjects = styled.section`
-  ${FlexWrapper} {
-    gap: 42px;
-  }
+  min-height: 100vh;
 `
