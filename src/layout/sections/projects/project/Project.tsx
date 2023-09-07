@@ -33,6 +33,10 @@ const StyledProject = styled.div`
 
   ${Description} {
     margin-bottom: 50px;
+    
+    @media ${theme.media.tablet} {
+      text-align: center;
+    }
   }
 `
 

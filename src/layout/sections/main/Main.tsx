@@ -2,7 +2,6 @@ import React from 'react';
 import styled from "styled-components";
 import photo from "../../../assets/img/photoo.jpg"
 import {FlexWrapper} from "../../../components/FlexWrapper";
-import {Description} from "../../../components/Description";
 import {Button} from "../../../components/Button";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/theme";
@@ -103,7 +102,7 @@ const MainDescription = styled.div`
 
 
 const SubTitle = styled.h2`
-  ${font({fMax: 50, fMin: 26})}
+  ${font({fMax: 50, fMin: 26})};
   //font-size: 50px;
   //font-weight: 500;
   margin: 10px 0;
