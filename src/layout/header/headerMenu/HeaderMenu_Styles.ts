@@ -137,6 +137,12 @@ const MenuPopup = styled.div<{isOpen: boolean}>`
   }
 `
 
+//Dekstop Menu
+
+const DekstopMenu = styled.nav`
+  
+`
+
 export const S = {
     StyledMenu,
     ListItem,
@@ -144,5 +150,6 @@ export const S = {
     Link,
     MobileMenu,
     BurgerButton,
-    MenuPopup
+    MenuPopup,
+    DekstopMenu
 }

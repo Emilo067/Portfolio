@@ -1,26 +1,44 @@
 import React from 'react';
 import {SectionTitle} from "../../../components/SectionTitle";
-import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Project} from "./project/Project";
 import {Container} from "../../../components/Container";
+import {S} from "./Projects_Styles"
 
-export const Projects = () => {
+const workData = [
+    {
+        title: "Title",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+        title: "Title",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+        title: "Title",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+        title: "Title",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua."
+    }
+]
+
+export const Projects: React.FC = () => {
     return (
-        <StyledProjects>
+        <S.Projects>
             <Container>
                 <SectionTitle>Projects</SectionTitle>
                 <FlexWrapper wrap={"wrap"} justify={"space-around"} gap={"42px"}>
-                    <Project/>
-                    <Project/>
-                    <Project/>
-                    <Project/>
+
+                    {workData.map((w, index) => {
+                        return <Project title={w.title} key={index}
+                                        description={w.description}/>
+                    })}
+
                 </FlexWrapper>
             </Container>
-        </StyledProjects>
+        </S.Projects>
     );
 };
 
-const StyledProjects = styled.section`
-  min-height: 100vh;
-`

@@ -1,43 +1,67 @@
 import React from 'react';
-import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Skill} from "./skill/Skill";
 import {Container} from "../../../components/Container";
-import {theme} from "../../../styles/theme";
+import {S} from "./Skills_Styles"
 
-export const Skills = () => {
+const skillData = [
+    {
+        iconID: "javascript",
+        name: "javascript",
+    },
+    {
+        iconID: "typescript",
+        name: "typescript"
+    },
+    {
+        iconID: "react",
+        name: "react js"
+    },
+    {
+        iconID: "reactNative",
+        name: "react native"
+    },
+    {
+        iconID: "redux",
+        name: "Redux"
+    },
+    {
+        iconID: "html",
+        name: "html5"
+    },
+    {
+        iconID: "css",
+        name: "css3"
+    },
+    {
+        iconID: "sass",
+        name: "sass"
+    },
+    {
+        iconID: "git",
+        name: "git"
+    },
+    {
+        iconID: "vs",
+        name: "vs code"
+    }
+]
+
+export const Skills: React.FC = () => {
     return (
-        <StyledSkills>
+        <S.Skills>
             <Container>
                 <SectionTitle>Skills</SectionTitle>
                 <FlexWrapper justify={"center"} wrap={"wrap"} gap={"40px"}>
-                    <Skill iconID={"javascript"} name={"JAVASCRIPT"}/>
-                    <Skill iconID={"typescript"} name={"typescript"}/>
-                    <Skill iconID={"react"} name={"react js"}/>
-                    <Skill iconID={"reactNative"} name={"react native"}/>
-                    <Skill iconID={"redux"} name={"Redux"}/>
-                    <Skill iconID={"html"} name={"html5"}/>
-                    <Skill iconID={"css"} name={"css3"}/>
-                    <Skill iconID={"sass"} name={"sass"}/>
-                    <Skill iconID={"git"} name={"git"}/>
-                    <Skill iconID={"vs"} name={"vs code"}/>
+
+                    {skillData.map((s, index) => {
+                        return <Skill iconID={s.iconID} key={index}
+                                      name={s.name}/>
+                    })}
+
                 </FlexWrapper>
             </Container>
-        </StyledSkills>
+        </S.Skills>
     );
 };
-
-const StyledSkills = styled.section`a
-  min-height: 50vh;
-  background-color: rgba(223, 81, 25, 0.47);
-  ${FlexWrapper} {
-    margin: 0 auto; 
-    max-width: 870px;
-    width: 100%;
-    
-    @media ${theme.media.tablet} {
-      flex-direction: column;
-    }
-  }
-`
