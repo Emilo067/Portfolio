@@ -1,5 +1,6 @@
 import styled, {css} from "styled-components";
 import {theme} from "../../../styles/theme";
+import {Link} from "react-scroll";
 
 const StyledMenu = styled.nav`
 
@@ -15,9 +16,11 @@ const Item = styled.li`
  
 `
 
-const Link = styled.a`
+const NavLink = styled(Link)`
   font-size: 20px;
   font-weight: 500;
+  cursor: pointer;
+
 
   background-image: linear-gradient(to right,
   #00BCD4,
@@ -44,13 +47,16 @@ const Link = styled.a`
     transition: all 0.3s ease-in-out;
   }
 
-  &:hover {
+  &:hover, &.active {
     background-position: 0;
+    &::before{
+      width: 100%;
+    }
   }
 
-  &:hover::before {
-    width: 100%;
-  }
+  //&:hover::before, &.active{
+  //  width: 100%;
+  //}
 
 `
 
@@ -62,11 +68,13 @@ const MobileMenu = styled.nav`
 
 const BurgerButton = styled.button<{isOpen: boolean}>`
   position: fixed;
-  width: 200px;
-  height: 200px;
-  top: -100px;
-  right: -100px;
+  width: 160px;
+  height: 160px;
+  top: -80px;
+  right: -80px;
   z-index: 9999999;
+  background-color: #0f1624;
+  border-bottom-left-radius: 50px;
 
   span {
     display: block;
@@ -74,7 +82,7 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
     height: 2px;
     background-color: ${theme.colors.font};
     position: absolute;
-    left: 40px;
+    left: 30px;
     bottom: 50px;
 
     ${props => props.isOpen && css<{ isOpen: boolean }>`
@@ -147,7 +155,7 @@ export const S = {
     StyledMenu,
     ListItem,
     Item,
-    Link,
+    NavLink,
     MobileMenu,
     BurgerButton,
     MenuPopup,

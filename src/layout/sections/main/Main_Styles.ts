@@ -49,7 +49,6 @@ const Image = styled.div`
 
 const Main = styled.section`
   min-height: 100vh;
-  
   @media ${theme.media.tablet} {
     ${Button} {
       display: block;
@@ -73,6 +72,9 @@ const MainDescription = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
+  @media ${theme.media.mobile} {
+    max-width: none;
+  }
 `
 
 

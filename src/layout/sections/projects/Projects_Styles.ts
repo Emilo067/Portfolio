@@ -5,7 +5,7 @@ import {Button} from "../../../components/Button";
 import {font} from "../../../styles/Common";
 
 const Projects = styled.section`
-  
+  position: relative;
 `
 
 const Project = styled.div`

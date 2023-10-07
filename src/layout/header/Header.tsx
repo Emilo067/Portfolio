@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {DesktopMenu} from "./headerMenu/desktopMenu/DesktopMenu";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {Container} from "../../components/Container";
@@ -6,7 +6,7 @@ import {MobileMenu} from "./headerMenu/mobileMenu/MobileMenu";
 import {S} from "./Header_Styles"
 
 export const Header: React.FC = () => {
-    const [width, setWidth] = React.useState(window.innerWidth);
+    const [width, setWidth] = useState(window.innerWidth);
     const breakpoint = 768;
 
     React.useEffect(() => {

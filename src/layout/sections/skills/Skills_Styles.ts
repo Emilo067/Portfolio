@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {theme} from "../../../styles/theme";
+import {Icon} from "../../../components/icon/Icon";
 
 const Skills = styled.section`
+  position: relative;
   min-height: 50vh;
   background-color: rgba(223, 81, 25, 0.47);
 
@@ -21,24 +23,22 @@ const Skill = styled.div`
  flex-grow: 1;
 `
 
-const Name = styled.span`
-  color: #BDEBEA;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: 2.166px;
-  text-transform: uppercase;
-`
-
 const SkillBox = styled.div`
   width: 120px;
   height: 175px;
   margin: 0 auto;
+  position: relative;
+  transition: 0.5s ease-out;
+
+  &:hover {
+    //transform: rotate(1turn) scale(1.4);
+    transform: matrix(0, 1, 1, 0, 0, 0);
+  }
+
 `
 
 export const S = {
     Skills,
     Skill,
-    Name,
     SkillBox
 }

@@ -3,6 +3,7 @@ import {theme} from "../styles/theme";
 import {font} from "../styles/Common";
 
 export const Button = styled.button`
+  position: relative;
   max-width: 240px;
   width: 100%;
   height: 60px;

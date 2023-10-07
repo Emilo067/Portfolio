@@ -33,10 +33,6 @@ export const GlobalStyles = createGlobalStyle`
 
   section {
     padding: 100px 0 140px;
-    
-    // @media ${theme.media.mobile} {
-    //   padding: 75px 115px;
-    // }
   }
 
   section:nth-child(even) {

@@ -5,10 +5,11 @@ import {Container} from "../../../components/Container";
 import draw from "../../../assets/img/drawing.png";
 import {S} from "./Main_Styles";
 import Typewriter from "typewriter-effect";
+import Tilt from 'react-parallax-tilt';
 
 export const Main: React.FC = () => {
     return (
-        <S.Main>
+        <S.Main id={"main"}>
             <Container>
                 <FlexWrapper justify={"space-around"} align={"center"} wrap={"wrap"}>
                     <S.MainDescription>
@@ -30,10 +31,13 @@ export const Main: React.FC = () => {
                             with a modern approach to development and a collaborative team.</S.HeaderDescription>
                         <Button>Contact</Button>
                     </S.MainDescription>
-                    <S.Image>
-                        <img src={draw} alt={"draw"}/>
-                    </S.Image>
+                    <Tilt className="parallax-effect" perspective={500} glareEnable={true} glareMaxOpacity={0.8} glareColor="#ffffff" glarePosition="bottom" glareBorderRadius="20px">
+                        <S.Image>
+                            <img src={draw} alt={"draw"}/>
+                        </S.Image>
+                    </Tilt>
                 </FlexWrapper>
+
             </Container>
         </S.Main>
     );

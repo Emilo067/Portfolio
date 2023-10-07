@@ -2,7 +2,8 @@ import {theme} from "../../styles/theme";
 import styled from "styled-components";
 import {FlexWrapper} from "../../components/FlexWrapper";
 
-const Footer = styled.footer`
+const Footer = styled.footer` 
+  //position: relative;
   background-color: ${theme.colors.primaryBg};
   padding: 40px 0;
   

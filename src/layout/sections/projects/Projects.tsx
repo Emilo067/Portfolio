@@ -26,7 +26,7 @@ const workData = [
 
 export const Projects: React.FC = () => {
     return (
-        <S.Projects>
+        <S.Projects id={"projects"}>
             <Container>
                 <SectionTitle>Projects</SectionTitle>
                 <FlexWrapper wrap={"wrap"} justify={"space-around"} gap={"42px"}>
