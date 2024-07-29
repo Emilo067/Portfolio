@@ -1,10 +1,11 @@
-import React, {ElementRef, FormEventHandler, RefObject, useRef} from 'react';
+import React, {ElementRef, useRef} from 'react';
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Container} from "../../../components/Container";
 import {Field} from "../../../components/form/field/Field";
-import {Button} from "../../../components/Button";
 import emailjs from "@emailjs/browser";
+import {Button} from "../../../components/Button/Button";
+import {S as Style} from "../../../components/Button/Button.styles";
 
 export const Contacts = () => {
 
@@ -51,7 +52,7 @@ const StyledForm = styled.form`
   margin: 0 auto;
   max-width: 530px;
   width: 100%;
-  ${Button} {
+  ${Style.ButtonStyles} {
     display: block;
     margin: 0 auto;
   }
