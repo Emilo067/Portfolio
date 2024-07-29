@@ -23,8 +23,8 @@ const NavLink = styled(Link)`
 
 
   background-image: linear-gradient(to right,
-  #00BCD4,
-  #00BCD4 50%,
+  ${theme.colors.accent},
+  ${theme.colors.accent} 50%,
   ${theme.colors.font} 50%);
   background-size: 200% 100%;
   background-position: -100%;
