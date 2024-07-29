@@ -11,13 +11,16 @@ type IconBoxPropsType = {
 
 const icons = [
     {
-        iconId: "github"
+        iconId: "github",
+        link: 'https://github.com/Emilo067'
     },
     {
-        iconId: "linkedin"
+        iconId: "linkedin",
+        link: ''
     },
     {
-        iconId: "telegram"
+        iconId: "telegram",
+        link: 'https://t.me/emilo0o0'
     },
 ]
 
@@ -25,7 +28,7 @@ export const IconBox: React.FC<IconBoxPropsType> = (props: IconBoxPropsType) => 
     return (
         <StyledIconBox>
             {icons.map((i, index) => {
-                return <a href="#">
+                return <a href={i.link ? i.link : '#'}>
                     <Icon iconID={i.iconId}  key={index}
                           width={props.width}
                           height={props.height}
