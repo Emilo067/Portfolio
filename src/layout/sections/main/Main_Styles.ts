@@ -2,8 +2,8 @@ import {theme} from "../../../styles/theme";
 import styled from "styled-components";
 import {font} from "../../../styles/Common";
 import photo from "../../../assets/img/photoo.jpg"
-import {Button} from "../../../components/Button";
 import {FlexWrapper} from "../../../components/FlexWrapper";
+import {S as Style} from "../../../components/Button/Button.styles";
 
 
 const Image = styled.div`
@@ -49,12 +49,17 @@ const Image = styled.div`
 
 const Main = styled.section`
   min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
   @media ${theme.media.tablet} {
-    ${Button} {
-      display: block;
-      margin: 0 auto;
-      margin-top: 20px;
-    }
+     ${Style.ButtonStyles} {
+       display: block;
+       margin: 0 auto;
+       margin-top: 20px;
+     }
 
     ${FlexWrapper} {
       justify-content: center; /* Изменено с justify-content: space-around */
@@ -68,10 +73,11 @@ const Main = styled.section`
 
 const MainDescription = styled.div`
   text-align: left;
-  max-width: 50%;
+  max-width: 60%;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-right: 50px;
   @media ${theme.media.mobile} {
     max-width: none;
   }
@@ -82,7 +88,6 @@ const SubTitle = styled.h2`
   ${font({fMax: 50, fMin: 26})};
   //font-size: 50px;
   //font-weight: 500;
-  margin: 10px 0;
   span{
     white-space: nowrap;
   }
@@ -92,6 +97,8 @@ const SubTitle = styled.h2`
 `
 
 const Title = styled.h1`
+  margin: 20px 0;
+  
   ${font({weight: 600, fMax: 30, fMin: 20})}
   @media ${theme.media.mobile} {
   text-align: center;
@@ -102,7 +109,7 @@ const Title = styled.h1`
 `
 
 const HeaderDescription = styled.p`
-  margin: 10px 0;
+  margin-bottom: 20px;
   ${font({fMax: 20, fMin: 18})}
   
   @media ${theme.media.mobile} {
