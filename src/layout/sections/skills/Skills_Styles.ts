@@ -20,21 +20,18 @@ const Skills = styled.section`
 `
 
 const Skill = styled.div`
- flex-grow: 1;
+  width: 120px;
+  height: 175px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+
 `
 
 const SkillBox = styled.div`
-  width: 120px;
-  height: 175px;
+
   margin: 0 auto;
   position: relative;
-  transition: 0.5s ease-out;
-
-  &:hover {
-    //transform: rotate(1turn) scale(1.4);
-    transform: matrix(0, 1, 1, 0, 0, 0);
-  }
-
 `
 
 export const S = {
