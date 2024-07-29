@@ -6,8 +6,8 @@ export const Field = styled.input`
   width: 100%;
   height: 48px;
   border-radius: 6px;
-  border: 2px solid #4287f5;
-  background-color: #333333;
+  border: 2px solid ${theme.colors.accent};
+  background-color: ${theme.colors.secondaryBg};
   color: ${theme.colors.font};
   font-family: Poppins, sans-serif;
   font-size: 12px;
@@ -22,9 +22,8 @@ export const Field = styled.input`
     text-transform: capitalize;
   }
   &:focus-visible {
-    outline: 1px solid #4287f5;
+    outline: 1px solid ${theme.colors.accent};
   }
-  
 `
 
 export const Label = styled.label`
