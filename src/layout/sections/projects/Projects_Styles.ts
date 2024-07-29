@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import {theme} from "../../../styles/theme";
 import {Description} from "../../../components/Description";
-import {Button} from "../../../components/Button";
 import {font} from "../../../styles/Common";
+import {S as Style} from "../../../components/Button/Button.styles";
 
 const Projects = styled.section`
   position: relative;
@@ -40,12 +40,12 @@ const ImageWrapper = styled.div`
       backdrop-filter: blur(4px);
     }
 
-    ${Button} {
+    ${Style.ButtonStyles} {
       opacity: 1;
     }
   }
 
-  ${Button} {
+  ${Style.ButtonStyles} {
     transition: .6s;
     opacity: 0;
     position: absolute;
