@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
-import {theme} from "../../../styles/theme";
-import {Icon} from "../../../components/icon/Icon";
 
 const Skills = styled.section`
   position: relative;
@@ -12,10 +10,6 @@ const Skills = styled.section`
     margin: 0 auto;
     max-width: 870px;
     width: 100%;
-
-    @media ${theme.media.tablet} {
-      flex-direction: column;
-    }
   }
 `
 

@@ -80,6 +80,7 @@ const MainDescription = styled.div`
   margin-right: 50px;
   @media ${theme.media.mobile} {
     max-width: none;
+    margin: 0;
   }
 `
 

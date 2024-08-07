@@ -42,7 +42,6 @@ export const Main: React.FC = () => {
                         </S.Image>
                     </Tilt>
                 </FlexWrapper>
-
             </Container>
         </S.Main>
     );
