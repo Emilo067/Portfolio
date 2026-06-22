@@ -6,6 +6,7 @@ import {Container} from "../../../components/Container";
 import {S} from "./Projects_Styles"
 import todolistImg from '../../../assets/img/todolist.jpg'
 import socialNetwork from '../../../assets/img/social-network.jpg'
+import kanban from '../../../assets/img/kanban.jpg'
 
 const workData = [
     {
@@ -21,10 +22,10 @@ const workData = [
         link: 'https://emilo067.github.io/samurai-way-main/'
     },
     {
-        img: ``,
-        title: "Title",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        link: ''
+        img: `${kanban}`,
+        title: "Kanban board",
+        description: "This SPA allows users to drag-and-drop cards across columns (To Do, In Progress, Done) for clear workflow visualization. The key differentiator is the integration of dynamic dropdown menus that enable quick status updates, assignee changes, and priority adjustments directly from the board — eliminating the need for modal windows and significantly reducing friction in daily project tracking.",
+        link: 'https://kanban-board-implementation.vercel.app/'
     },
     {
         img: ``,
